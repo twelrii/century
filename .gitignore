@@ -19,3 +19,4 @@
 # .idea directory are created whis phpstorm project
 .idea
 # End of https://www.gitignore.io/api/linux
+/config

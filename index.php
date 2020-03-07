@@ -6,6 +6,8 @@
         printf("Connect failed: %s\n", mysqli_connect_error());
         exit();
     }
+    $mysqli->set_charset("utf8");
+    
     /*$timeline['right'][] = "<div class='right-content'>";
     $timeline['left'][] = "<div class='left-content'>";*/
     $queryArt = "SELECT  * FROM articles";
@@ -21,4 +23,5 @@
         }
         $i++;
     }
+    echo print_r($articles, true);
     require_once "template/index2.html";

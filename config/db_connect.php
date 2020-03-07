@@ -1,5 +1,5 @@
 <?php
 $host = 'localhost'; // адрес сервера
-$database = 'stoyear'; // имя базы данных
+$database = 'snu100'; // имя базы данных
 $user = 'root'; // имя пользователя
-$password = ''; // пароль
+$password = 'kolbasa2017'; // пароль
