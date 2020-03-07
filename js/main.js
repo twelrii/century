@@ -89,7 +89,7 @@ $(document).scroll(function () {
 */
 let history = $('#history').offset().top,
     timeline = $('#timeline'),
-    height = $(window).height() * 0.5;
+    height = $(window).height() * 0.2;
 
 function tgl (state) {
     /*timeline.animate({
@@ -115,10 +115,10 @@ $('.flowing-scroll').on( 'click', function(){
     el.toggleClass("active",   'addOrRemove');
     var dest = el.attr('href'); // получаем направление
     if(dest !== undefined && dest !== '') {
-        //console.log($(dest).offset().top);// проверяем существование
-        $('html').animate({
-                scrollY: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-        }, 1000, 'easeOutQuart'// скорость прокрутки
+        // console.log('dest top=',$(dest).offset().top);// проверяем существование
+        $('html, body').animate({
+                scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+        }, 1000, 'swing'// скорость прокрутки
         );
     }
     return false;

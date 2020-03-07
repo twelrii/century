@@ -7,7 +7,7 @@
         exit();
     }
     $mysqli->set_charset("utf8");
-    
+
     /*$timeline['right'][] = "<div class='right-content'>";
     $timeline['left'][] = "<div class='left-content'>";*/
     $queryArt = "SELECT  * FROM articles";
@@ -23,5 +23,5 @@
         }
         $i++;
     }
-    echo print_r($articles, true);
+    echo print_r($timeline, true);
     require_once "template/index2.html";
