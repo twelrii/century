@@ -634,3 +634,7 @@ footer.page-footer .footer-copyright{
         left: -3px;
     }
 }
+.active-date{
+    color: chartreuse;
+    font-size: 1.3em;
+}

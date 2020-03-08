@@ -143,3 +143,31 @@ $(function () {
     });
 });*/
 
+
+
+$(window).scroll(function(){
+    var activeId = null;
+    $('.flowing-scroll').each(function(){
+        $(this).removeClass("active-date");
+    });
+    $('.history-block').each(function(){
+        // if activeId return;
+        var scrollTop     = $(window).scrollTop(),
+            elementOffset = $(this).offset().top,
+            distance      = Math.abs(elementOffset - scrollTop),
+            windowHeight  = $(window).height(),
+            // breakPoint    = windowHeight * 0.9;
+            breakPoint = $(this).height() - windowHeight * 0.5;
+        if(distance < breakPoint) {
+            activeId = this.id;
+            console.log('active id = ', this.id);
+            $('a[href*="#' + this.id + '"]').addClass('active-date');
+        }else{
+            console.log('active id = none');
+        }
+        //     $(this).addClass("more-padding");
+        // }  if(distance < breakPoint) {
+        //     $(this).removeClass("more-padding");
+        // }
+    });
+});
