@@ -23,5 +23,5 @@
         }
         $i++;
     }
-    echo print_r($timeline, true);
+    // echo print_r($timeline, true);
     require_once "template/index2.html";
