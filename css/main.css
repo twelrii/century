@@ -37,7 +37,7 @@ p{
 }
 
 .headgrad{
-    height: inherit;
+    /*height: 100vh;*/
     background: rgb(29,71,87);
     background: linear-gradient(180deg, rgba(44,98,116,1) 0%, rgba(245,245,245,0) 100%);
     background-size: cover;
@@ -85,7 +85,7 @@ p{
 }
 
 .hundred{
-    padding-top: 150px;
+    /*padding-top: 150px;*/
 }
 
 .hundred-content_img{
@@ -637,4 +637,10 @@ footer.page-footer .footer-copyright{
 .active-date{
     color: chartreuse;
     font-size: 1.3em;
+}
+.row-100{
+    height: calc(100% - 170px);
+}
+.headgrad .container{
+    height: 100vh;
 }
