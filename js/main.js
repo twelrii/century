@@ -100,7 +100,7 @@ function tgl (state) {
 
 $(window).on("scroll", function () {
     var top = window.scrollY;
-    console.log(top, history, timeline.height());
+    // console.log(top, history, timeline.height());
     if (top >= history-height) {
         tgl(false);
     } else {
@@ -160,10 +160,10 @@ $(window).scroll(function(){
             breakPoint = $(this).height() - windowHeight * 0.5;
         if(distance < breakPoint) {
             activeId = this.id;
-            console.log('active id = ', this.id);
+            // console.log('active id = ', this.id);
             $('a[href*="#' + this.id + '"]').addClass('active-date');
         }else{
-            console.log('active id = none');
+            // console.log('active id = none');
         }
         //     $(this).addClass("more-padding");
         // }  if(distance < breakPoint) {

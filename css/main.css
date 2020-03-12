@@ -4,7 +4,7 @@
  */
 
 body{
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
     font-size: 16px;
     color: white;
 }
@@ -115,6 +115,7 @@ p{
 #brief{
     background: url("../img/main/100_breifbg.png") center center no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .brief-title{
@@ -347,10 +348,13 @@ p{
     text-align:right;
 }
 .left-content p {
-    margin:100px 0 0;
+    margin:80px 0 0;
 }
-.right-content p {
+.right-content p:not(:first-child) {
     margin: 43px 0 97px;
+}
+.right-content p:first-child {
+    margin: 0 0 97px;
 }
 .left-content .flowing-scroll{
     padding-right: 50px;
@@ -635,7 +639,7 @@ footer.page-footer .footer-copyright{
     }
 }
 .active-date{
-    color: chartreuse;
+    color: chartreuse!important;
     font-size: 1.3em;
 }
 .row-100{
@@ -643,4 +647,7 @@ footer.page-footer .footer-copyright{
 }
 .headgrad .container{
     height: 100vh;
+}
+#timeline p {
+    height: 1.5em;
 }

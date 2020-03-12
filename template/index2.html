@@ -202,11 +202,11 @@
             </div>
         </div>
     </section>
-    <div class="white-space"></div>
+    <!-- <div class="white-space"></div> -->
     <section id="history">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-sm-10">
                     <?php foreach($articles as $article): ?>
                     <div id="<?= $article['id'];?>" class="history-block">
                         <div class="row">
@@ -238,25 +238,28 @@
                     </div>
                     <?php endforeach; ?>
                 </div>
+                <div class="d-none d-sm-block col-sm-2 ">
+                    <div id="timeline"  class="row">
+                        <div class="col left-content">
+                            <?php foreach($timeline['right'] as $time): ?>
+                            <p>
+                                <a href='<?="#".$time[1]?>' class="flowing-scroll"><?= $time[0]; ?></a>
+                            </p>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="col right-content">
+                            <?php foreach($timeline['left'] as $time): ?>
+                            <p>
+                                <a href='<?="#".$time[1]?>' class="flowing-scroll"><?= $time[0]; ?></a>
+                            </p>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <div id="timeline" class="d-none">
-        <div class="left-content">
-            <?php foreach($timeline['right'] as $time): ?>
-            <p>
-                <a href='<?="#".$time[1]?>' class="flowing-scroll"><?= $time[0]; ?></a>
-            </p>
-            <?php endforeach; ?>
-        </div>
-        <div class="right-content">
-            <?php foreach($timeline['left'] as $time): ?>
-            <p>
-                <a href='<?="#".$time[1]?>' class="flowing-scroll"><?= $time[0]; ?></a>
-            </p>
-            <?php endforeach; ?>
-        </div>
-    </div>
+    
 </main>
 <footer class="footer">
     <div class="container">
